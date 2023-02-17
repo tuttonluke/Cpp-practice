@@ -1,2 +1,2 @@
-# Cpp-practice
-Repository for learning C++
+# Learning C++
+Repository for learning and practicing C++.
