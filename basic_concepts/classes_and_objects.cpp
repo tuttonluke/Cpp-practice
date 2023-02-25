@@ -6,27 +6,32 @@ class Book {
         string title;
         string author;
         int pages;
+
         // constructor functions
-        Book(string name){
-            cout << name << endl;
+        Book(){
+            title = "No title.";
+            author = "No author.";
+            pages = 0;
+        }
+
+        Book(string aTitle, string aAuthor, int aPages){
+            title = aTitle;
+            author = aAuthor;
+            pages = aPages;
         }
 };
 
 int main()
 {   
 
-    Book book1("Ensaio Sobre a Cegueira");
-    book1.title = "Ensaio Sobre a Cegueira";
-    book1.author = "José Saramago";
-    book1.pages = 200;
+    Book book1("Ensaio Sobre a Cegueira", "José Saramago", 200);
+    Book book2("Cien Años de Soledad", "Gabriel García Márquez", 500);
+    Book book3;
 
-    Book book2("Cien Años de Soledad");
-    book2.title = "Cien Años de Soledad";
-    book2.author = "Gabriel García Márquez";
-    book2.pages = 500;
 
     cout << book1.title << endl;
     cout << book2.author << endl;
+    cout << book3.pages << endl;
 
     return 0;
 }
