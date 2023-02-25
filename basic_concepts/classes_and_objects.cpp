@@ -21,6 +21,27 @@ class Book {
         }
 };
 
+class Student {
+    public:
+        string name;
+        string subject;
+        double score;
+
+        Student(string aName, string aSubject, double aScore){
+            name = aName;
+            subject = aSubject;
+            score = aScore;
+        }
+
+        // Object functions
+        bool hasHonours(){
+            if(score >= 3.5){
+                return true;
+            }
+            return false;
+        }
+};
+
 int main()
 {   
 
@@ -28,10 +49,17 @@ int main()
     Book book2("Cien Años de Soledad", "Gabriel García Márquez", 500);
     Book book3;
 
-
+    /*
     cout << book1.title << endl;
     cout << book2.author << endl;
     cout << book3.pages << endl;
+    */
+
+    Student student1("James", "Buisness", 2.4);
+    Student student2("Jane", "Physics", 3.6);
+
+    cout << student1.hasHonours() << endl;
+    cout << student2.hasHonours() << endl;
 
     return 0;
 }
